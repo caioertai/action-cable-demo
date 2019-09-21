@@ -7,9 +7,13 @@ const channelConfig = {
 
 const channelCallbacks = {
   // Called when the subscription is created.
-  initialized: () => {},
+  initialized: () => {
+    console.log("Just subscribed to WaveChannel")
+  },
   // Called when a broadcast is received
-  received: () => {}
+  received: (data) => {
+    alert(data)
+  }
 };
 
 const initWaveChannel = () => {
